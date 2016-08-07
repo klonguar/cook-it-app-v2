@@ -1,0 +1,174 @@
+$navbar-default-bg: #7d2e49;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+#logo {
+    float: left;
+    font-size: 2.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+.center {
+    text-align: center;
+}
+.jumbotron {
+    background-image: linear-gradient(#7d2e49, transparent 90%), linear-gradient(0deg, #fff, transparent), asset-url('new_cover_page.jpg');
+    background-size: cover;
+    height: 650px;
+
+}
+.jumbotron h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+.btn-xlarge {
+    font-size: 1.7em;
+    background-color: #7d2e49;
+}
+.btn-primary{
+    border-color: #7d2e49;
+}
+footer {
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid #eaeaea;
+    color: #777;
+}
+footer a{
+    color:#7d2e49 ;
+}
+footer a:hover {
+    color: #7d2e49;
+    background-color: #fff;
+}
+footer small {
+    float: right;
+}
+.recipe-actions {
+    border-top: 1px solid #eaeaea;
+    padding-top: 5px;
+}
+.description {
+    margin-top: 0;
+}
+
+.recipe-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-bottom: 15px;
+}
+.recipe-body {
+    border-top: 1px solid #eaeaea;
+    padding-top: 15px;
+    padding-bottom: 25px;
+}
+.recipe-meta-details {
+    border-top: 1px solid #eaeaea;
+    margin-top: 45px;
+}
+.listing {
+    list-style: none;
+    padding-left: 0;
+}
+.navbar-default .navbar-nav li a{
+    color: white;
+    font-size: 17px;
+}
+.navbar-default .navbar-nav li a:hover{
+    color: white;
+}
+
+.dropdown-menu{
+    background-color:#65253b
+}
+
+.navbar-default .navbar-nav .open  a, .navbar-default .navbar-nav .open a:hover, .navbar-default .navbar-nav .open a:focus{
+    
+    color: white;
+}
+
+.jumbotron a:visited{
+    color: white;
+}
+
+.jumbotron .btn-primary:hover{
+    background-color: white;
+    border-color: white;
+    color: #65253b;
+}
+
+a.btn.btn-xs.btn-primary{
+    color: white;
+}
+
+a.btn.btn-xs.btn-danger{
+    color: white;
+}
+
+.btn-primary{
+    color: white;
+    background-color: #65253b;
+    border-color: #65253b;
+}
+
+.btn-primary:hover{
+    color: #65253b;
+    border-color: #65253b;
+    background-color: white;
+}
+a.btn.btn-primary.btn-lg{
+    color: white;
+}
+a.btn.btn-primary.btn-lg:hover{
+    color: #65253b;
+}
+
+.pagination .active a, .pagination .active a:hover, .pagination .active a:focus, .pagination .active span, .pagination .active span:hover, .pagination .active span:focus{
+    color: #fff;
+    background-color: #65253b;
+    border-color: #65253b;
+    cursor: default;
+}
+
+.pagination li a{
+    color: #65253b;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+.pagination > li > a:hover{
+    color: white;
+    background-color: #65253b;
+    border-color: #65253b;
+}
+.form-control:focus{
+    border-color:#65253b
+}
+.recipe-title{
+    font-size: 23px;
+}
+.recipe-title a:visited{
+    color: #65253b;
+}
+.recipe-title a:hover{
+    color: #65253b;
+    background-color: transparent;
+    text-decoration: none;
+}
+.recipe-body{
+    font-size: 18px;
+    line-height: 27px;
+    color: black;
+}
+.like{
+    font-size: 18px
+}
+

@@ -1,0 +1,32 @@
+<p align="center" id="notice"><%= notice %></p>
+
+<h1 align="center">COOK IT USERS</h1>
+<div align="center">
+    <%= will_paginate %> <!-- this will add a display for Pagination -->
+    <% @users.each do |user| %><!--This statement loop through all users that exist in the app -->
+        <ul class="listing">
+            <div class="row">
+                <div class="well col-md-4 col-md-offset-4">
+                    <li><%= link_to gravatar_for(user), user_path(user) %></li>
+                    <!-- list User's Gravatar and link it to the use's show page-->
+                    
+                    <li class="recipe-title">
+                    <%= link_to user.username, user_path(user) %> </li><!-- list and link Users's name to the use's show page-->
+                    <li>
+                        <small>
+                            <%= pluralize(user.recipes.count, "recipe") if user.recipes %><!--list how many recipes a user has created if he has recipe--> 
+                        </small>
+                    
+                    </li>
+                    <% if logged_in? and current_user.admin? %>
+                        <li><%= link_to "Delete this user", user_path(user), method: :delete, 
+                        data: { confirm: "Are you sure you want to delete the user and all their articles?" } %>
+                        </li>
+                    <%end%>
+                
+                </div>
+            </div>
+        </ul>
+    <% end %>
+    <%= will_paginate %> <!-- this will add a display for Pagination -->
+</div>

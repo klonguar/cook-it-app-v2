@@ -1,0 +1,46 @@
+<% obj.each do |recipe| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well well-lg">
+        <div class="recipe-title">
+          <%= link_to recipe.title, recipe_path(recipe) %>
+           <!-- Like/Dislike Feature -->
+            <div class='pull-right like'>
+              <%= link_to like_recipe_path(recipe, like: true), method: :post do %>
+                <i class='glyphicon glyphicon-thumbs-up'></i> &nbsp <%= recipe.thumbs_up_total%>
+              <%end%>&nbsp&nbsp
+              <%= link_to like_recipe_path(recipe, like: false), method: :post do %>
+                <i class='glyphicon glyphicon-thumbs-down'></i> &nbsp <%= recipe.thumbs_down_total%>
+              <%end%>
+            </div>
+        </div>
+        
+        <div class="recipe-body">
+          <%= truncate(recipe.description, length: 100) %> 
+          <!-- I have used the Truncate method - source: https://github.com/hgmnz/truncate_html-->
+          <div class="recipe-meta-details">
+            <small>
+              Created by: <%= recipe.user.username if recipe.user%>,
+              <%= time_ago_in_words(recipe.created_at) %> ago,
+              last updated: <%= time_ago_in_words(recipe.updated_at) %> ago
+            </small> <!--This code enable us to add the user data to our recipes listing using ruby method: time_ago_in_words 
+          to display timing - source:https://www.railstutorial.org/book/user_microposts-->
+          
+           
+          
+          </div>
+        </div>
+        <% if logged_in? && (current_user == recipe.user || current_user.admin?) %><!-- This statemnet checks if the user logged in is the recipe creator and  the admin-->
+          <div class="recipe-actions">
+            <%= link_to 'Update', edit_recipe_path(recipe), class: "btn btn-xs btn-primary" %> |
+            <%= link_to 'Delete', recipe_path(recipe), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-xs btn-danger" %>
+          </div><!-- I have taken @ from (@recipe) on the Links as we are referring to all recipes 
+                     not each recipe as it is the case in the show page -->
+        <%end%>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+
+

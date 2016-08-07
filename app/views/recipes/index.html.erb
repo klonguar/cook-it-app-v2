@@ -1,0 +1,11 @@
+<p align="center" id="notice"><%= notice %></p>
+<h1 align="center">All Recipes</h1>
+<div align="center">
+  
+  <%= will_paginate %> <!-- this will add a display for Pagination -->
+  
+</div>
+<%= render 'recipe', obj: @recipes%>
+<div align="center">
+  <%= will_paginate %> <!-- this will add a display for Pagination -->
+</div>
